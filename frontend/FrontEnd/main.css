@@ -1,0 +1,282 @@
+body{
+    margin:0px;
+    padding:0px;
+    overflow-x: hidden;
+/*    overflow-y: hidden;    */
+}
+
+/*
+#try{ 
+    margin-top: 40%;
+}
+*/
+.main{
+    padding-top: 3rem;
+    width: 100%;
+}
+
+.container{
+    margin: 0px auto;
+}
+.container1{
+    margin: 0px auto;
+}
+#home-section2{
+    background-image: url(images/background-books-bookshelves-1193603.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#home-section1{
+    background-image: url(images/background-books-bookshelves-1193603.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+/*    width: 100%;*/
+/*    min-height: 800px;*/
+}
+#home-section{
+    background-image: url(images/background-books-bookshelves-1193603.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 800px;
+}
+#userimage{
+    max-height: 20rem;
+    max-width: 20rem;
+}
+#forinline{
+    display: inline-block;
+}
+.fontcolor{
+  color: white; 
+    font-weight: 300;
+}
+.dark-overlay{
+    background: rgba(0,0,0,0.8);
+    min-height: 800px;
+}
+#logo{
+/*
+    height: 5rem;
+    width: 5rem;
+*/
+    text-align: center;
+/*
+    min-height: 5%;
+    min-width: 5%;
+    margin-top: 2%;
+    margin-left: 71%;
+*/
+}
+.card-body{
+    margin-top: 5rem;
+    max-width: 50%;
+    max-height: 50rem;
+    background-color: rgba(0,0,0,0.6);
+    text-align: center;
+}
+h2{
+    font-size: 350%;
+    color: white;
+}
+.main{
+    transform: translateY(-20%);
+}
+h3{
+    font-family: 'Dosis', sans-serif;
+/*font-family: 'Nova Flat', cursive;*/
+/*font-family: 'Source Code Pro', monospace;*/
+/*font-family: 'Abril Fatface', cursive;*/
+}
+#adminPic{
+    max-width: 40%;
+    max-height: 30%;
+    transform: translateY(-50%);
+    margin-bottom: 0px;
+    padding-top: 2rem;
+}
+input{
+    margin-bottom: 10%;
+}
+input[type=checkbox]{
+    width: 20px;
+    height: 20px;
+}
+h6{
+    display: inline-block;
+    font-size: 25px;
+    color: white;
+    margin-left: 3%;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered{
+    padding: 6px 5px !important;
+}
+.navbar-brand img{
+    width: 60%;
+    margin: auto;
+}
+.nav-link {
+    font-size: 160%;
+    margin: 6px
+}
+.navbar{
+    background-color: #333;
+}
+
+.offset-md-3{
+    padding-left: 6rem;
+}
+.offset-sm-3{
+    padding-left: 6rem;
+}
+
+a.navbar-brand-1{
+    font-size: 40px;
+}
+
+#adminPicnav-item{
+    margin-right: 200%;
+}
+#home-section
+{
+    padding-top: 98px;
+}
+table{
+    font-size: 150%;
+    background-color: rgba(0,0,0,0.5);
+}
+.modal{
+    text-align: center;
+}
+.ml-3, .mx-3 {
+    margin-left: 4rem!important;
+}
+.modal-content{
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+    min-height: 200px;
+}
+h4.modal-title{
+    font-size: 300%;
+}
+.ml-5, .mx-5 {
+    margin-left: 8rem!important;
+}
+.ml-4, .mx-4 {
+    margin-left: 5.5rem!important;
+}
+#skills{
+    display: inline-block;
+    margin: 2rem 2rem 0rem 0rem;
+    font-size: 1.5rem;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+@media only screen and (max-width: 991px){
+   
+    #logo{
+        left: 50%;
+        transform: translateX(-15%);
+
+    }
+    .card-body{
+        margin-top: 20%;
+        min-width: 600px;
+        min-height: %;
+        background-color: rgba(0,0,0,0.6);
+        text-align: center;
+    }
+    button.btn{
+        width: 95%;
+        margin-top: 2%;
+
+    }
+    .modal-dialog{
+        margin: 0px;
+        max-width: 96%;
+        margin-top: 200px;
+    }
+    i.fas,i.fab{
+        display: none;
+    }
+    .container1{
+        margin-left: 0;
+    }
+    #home-section{
+        height: 1330px;
+    }
+    .dark-overlay{
+        height: 1330px;  
+    }
+    .ml-5, .mx-5 {
+        margin-left: 0.5rem!important;
+    }
+    .h3, h3 {
+        font-size: 3.75rem;
+    }
+    h4.modal-title {
+        font-size: 300%;
+    }
+    .form-control-lg{
+        font-size: 1.25rem;
+    }
+    .btn-group-lg>.btn, .btn-lg {
+        font-size: 1.50rem;
+    }
+    h4.modal-title {
+        font-size: 421%;
+    }
+    .ml-3, .mx-3 {
+        margin-left: 0.5rem!important;
+    }
+    .ml-4, .mx-4 {
+        margin-left: 0.5rem!important;
+    }
+    .ml-2, .mx-2 {
+        margin-left: 0rem!important;
+    }
+
+
+
+}
+@media only screen and (max-width: 480px){
+    #logo{
+        width: 100%;
+    }
+    .card-body{
+        margin-top: 20%;    
+        min-width: 100%;
+        min-height: %;
+        background-color: rgba(0,0,0,0.6);
+        text-align: center;
+    }
+}
+@media only screen and (min-width: 991px) {
+    a.navbar-brand-1 {
+        display: none;
+        font-size: 200px;
+        margin-top: 30%;
+        left: 50%;
+    }
+}
+
+
+
+
+table 
+{
+  position: absolute;
+  left: 15%;
+  right:25%;
+  top:30%;
+  text-align: center;
+    border: none;
+  
+}
+
+th,td 
+{
+   color: white;
+    padding:16px;
+}
+
