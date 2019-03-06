@@ -5,46 +5,37 @@
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <title>HRMS</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="main.css">
-</head>
+    </head>
     <body>
-        <div id="home-section1">
-            <div class="dark-overlay">
-                <div class="container">
-                    <div class="offset-sm-3 offset-md-3" id="navbar-image">
-                        <a class="navbar-brand navbar-brand" href="#"><img src="images/logo.png" id="logo" alt=""></a>
-                    </div>
-                    <div class="loginBox">
-                        <div class="card-body container1">
-                           <!-- <img src="images/man-161282_1280.png" alt="" id="adminPic" class="rounded-circle">-->
-                            <div class="main">
-                                <h2>Login</h2>
-                                <form>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control form-control-lg mt-5" id="Username" placeholder="Username, Email">
-                                    </div>
-                                    <div class="form-group pass">
-                                        <input type="password" class="form-control form-control-lg mt-4" id="Password" placeholder="Enter Password">
-                                    </div>
-                                    <div class="showpass">
-                                        <input type="checkbox" onclick="showpass()"
-                                               ><h6>Show Password</h6>
-                                    </div>
-                                    <input type="button" value="Submit" class="btn btn-outline-light btn-block btn-lg mt-4" onclick="loginform()">
-                                </form>
+        <div class="container-fluid">
+            <div  class="row" id="navbar-image"  style=" box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);">
+                <a class="navbar-brand navbar-brand" href="#"><img src="images/logo.png" id="logo" alt=""></a>
+            </div>
+                <div class="card-body container">
+                        <h2>Login</h2>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-lg mt-4" id="Username" placeholder="Username, Email">
                             </div>
-                        </div>
+                            <div class="form-group pass">
+                                <input type="password" class="form-control form-control-lg" id="Password" placeholder="Enter Password">
+                            </div>
+                            <div class="showpass">
+                                <input type="checkbox" onclick="showpass()"
+                                       ><h6>Show Password</h6>
+                            </div>
+                            <input type="button" value="Submit" class="btn btn-primary btn-block btn-lg mt-4" onclick="loginform()" style="color: white">
+                        </form>
                     </div>
                 </div>
-            </div>
-        </div>
     </body>
-<script
-        src="http://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
-		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="js/index.js"></script>
+    <script
+            src="http://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
 </html>

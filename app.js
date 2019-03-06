@@ -6,11 +6,15 @@ const bodyParser = require('body-parser');
 const mongoose=require('mongoose');
 const bcrypt=require('bcrypt');
 const jwt = require("jsonwebtoken");
+const checkAuth=require('./middleware/checkAuth');
+var cors = require('cors')
+require('dotenv').config();
 
 //Enabling Cors
+app.use(cors())
 app.use( (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE");
+  res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
   next();
 });
@@ -47,7 +51,7 @@ app.get('/userhomepage/getskills', (req,res)=>{
 });
 
 //add skills in skill table
-app.post('/adminhomepage/addskill', (req,res)=>{
+app.post('/adminhomepage/addskill',checkAuth, (req,res)=>{
   	console.log(req.body);
    const skill={
     Skillsname:(req.body.Skillsname)
@@ -66,7 +70,7 @@ app.get('/userhomepage/getuserdetails/:Username', (req,res)=>{
 });
 
 //add in user table
-app.post('/adminhomepage/adduser', (req,res)=>{
+app.post('/adminhomepage/adduser',checkAuth,(req,res)=>{
    //console.log(req.body);
    usermod.find({Username:req.body.Username})
      .exec()
@@ -118,7 +122,7 @@ app.post('/login', (req,res,next)=>{
               message: 'login failed'
             });
           }
-          if(result){
+          else{
               //token
               const token=jwt.sign({
                 Username:user[0].Username,
@@ -129,12 +133,14 @@ app.post('/login', (req,res,next)=>{
                 expiresIn: "1h"
                }
               );
+
               return res.status(200).json({
-              message: 'login successfull',
+                message: 'login successfull',
               token:token,
               role:user[0].Usertype,
               username:user[0].Username
-            }); 
+              });
+                        
           }
           res.status(401).json({
           message: "Auth failed"
@@ -173,24 +179,24 @@ usermod.findOne({
  });
 
 //get projects
-app.get('/adminhomepage/getprojects/:pno/:psize', (req,res)=>{
+app.get('/adminhomepage/getprojects/:pno',checkAuth, (req,res)=>{
 
+console.log(req.headers)
 //projectmod.find().count().then(count=>{res.send({count:count})});
 var pageNo;
-var pageSize;
+var pageSize=4;
 
   //var count = projectmod.find({}).count();
-if(req.params.pno=='undefined')
-{
-  pageNo=1;
-  pageSize=4;
+// if(req.params.pno=='undefined')
+// {
+//   pageNo=1;
+//   pageSize=4;
 
-  console.log("PAGE SIZE inside if",req.params)
-}
-else{
+//   console.log("PAGE SIZE inside if",req.params)
+// }
+
 pageNo=parseInt(req.params.pno);
-pageSize=parseInt(req.params.psize);
-}
+
 
 console.log("PAGE SIZE",pageSize);
   
@@ -267,4 +273,6 @@ const port=5000;
 app.listen(port, ()=>{
 console.log("server started on the port "+port);
 });
+
+
 

@@ -1,35 +1,44 @@
 
 var temp=null;
 var temp2=null;
-var pageNo=1;
+var pageNumber=1;
 var pageSize=4;
+var token=localStorage.getItem("token")
 var found= new Set();
-function Next(id)
+var i;
+function showprojects(i,psize)
+
 {
-    pageNo+=1;
-    showprojects(pageNo,pageSize);
-}
-
-
-function showprojects(pno,psize){
+    //console.log("kjsn",token);
+   // console.log("no and size=",pno,psize)
+  var pno= i;
+   if(!pno){
+       pno=1;
+    }
+    // console.log(PageNumber);
     
-    console.log("no and size=",pno,psize)
+    //pno=i;
 			$.ajax	({
-				url: "http://localhost:5000/adminhomepage/getprojects/"+pno+"/"+psize,
+               
+                url: "http://localhost:5000/adminhomepage/getprojects/"+pno,
+				
 				type: 'GET',
-				dataType: 'json', 
+				dataType: 'json',
+                headers: {
+                    "Content-Type": "application/json",
+                    "cache-control": "no-cache" ,
+                    "Authorization": token
+                     },
 				success: function(data)
 				{
                     temp=data;
                     console.log(data);
-               
+                    console.log("hii",temp.count);
 				 var table=document.getElementById("tbodyid");
-              //   removeTableBody();
-                   // $("#mytable > tbody").html("");
-                   console.log(table);
+             
+                   //console.log(table);
                      $("#tbodyid").empty();
-                 //$("#mytable").detach();
-                 //$("#mytable > tr").detach();
+                
 				 for (var i=0; i<data.project.length; i++){
                         
 				 var row=table.insertRow(table.length);
@@ -42,16 +51,41 @@ function showprojects(pno,psize){
                      var t= document.createTextNode(row.insertCell(4).innerHTML=data.project[i].Userassigned);
                      b.appendChild(t);
      
-				 row.insertCell(5).innerHTML="<input type='button' value='Assign Users' class='btn btn-lg btn-warning mx-2'data-toggle='modal' data-target='#updateProjects' editbutton' onclick=\'assign(\""+data.project[i]._id+"\")'>";
+				 row.insertCell(5).innerHTML="<input type='button' value='Assign Users' style='color:white;' class='btn btn-lg btn-warning mx-2'data-toggle='modal' data-target='#updateProjects' editbutton' onclick=\'assign(\""+data.project[i]._id+"\")'>";
 				 row.insertCell(6).innerHTML="<input type='button' value='Delete' class=' btn btn-lg btn-danger deletebutton' onclick=\'deleteproject(\""+data.project[i]._id+"\")'>";
                 
 				     }
-                     console.log("han",table);
-                        
-                    
+                     console.log("han",table);  
+                    getTotal();
            }
+        
 		});
+  //setTimeout(,3000);
 }
+
+function getTotal()
+{
+   var count=temp.count;
+    console.log("kk",count);
+         numberOfPages = Math.ceil(count / pageSize);
+           console.log(numberOfPages);
+        buttons = '';
+            for( i=1; i<=numberOfPages; i++)
+            {
+                pageNumber=i;
+             buttons += '<button class="btn" style="margin-left:2px;" onclick="showprojects('+pageNumber+')">'  + pageNumber + '</button>';
+            }
+           // console.log("totaldata",data);
+            $('#pagin').html(buttons);
+            showPage = function(page) {
+                $(".line-content").hide();
+                $(".line-content").each(function(n) {
+                    if (n >= pageSize * (pageNumber - 1) && n < pageSize * page)
+                        $(this).show();
+                }); 
+            }
+    
+        }
 
 
 function createtechstack(){
@@ -71,6 +105,7 @@ function createtechstack(){
         }
     });
 }
+ 
 
 
 function adduser(){
@@ -81,13 +116,19 @@ function adduser(){
 		"Username": username,
 		"Password": password,
 		"Usertype": usertype,
-        "Skills": "none"
+        "Skills": "none",
+        //"token":token
 		}
 	$.ajax({
 		url: 'http://localhost:5000/adminhomepage/adduser',
         type: 'POST',
         dataType: 'json',
 	   data: datafornewuser,
+//        headers: {
+//             			"Content-Type": "application/json",
+//			            "cache-control": "no-cache" ,
+//                        "Authorization": token
+//                         },
         success: function(res){
                       alert("user has been added");
 					  window.location="adminhomepage.html";
@@ -96,10 +137,26 @@ function adduser(){
                 //alert(err);
             }				
         });
- 
 }
 
-
+function user()
+{
+   // $("#tbodyid").empty();
+  //console.log("show=",temp.users);    
+  var table=document.getElementById("userbodyid");
+ $("#userbodyid").empty();
+  for (var i=0; i<temp.users.length; i++){
+            var row=table.insertRow(table.length);
+            row.insertCell(0).innerHTML=i+1;
+            row.insertCell(1).innerHTML=temp.users[i].Username;
+            row.insertCell(2).innerHTML=temp.users[i].Skills;
+                }
+     var countusers=temp.users.length;
+console.log("usercount",countusers);
+   
+   
+				 
+}
 function addskill(){
 	var skillname = document.getElementById("skillnameaddskill").value;
 	
@@ -231,7 +288,7 @@ function assign(Id)
                     console.log(assignname);
                     console.log("user after match",usermatched[0].Skills);
                    // console.log(usermatched.length);
-                     var table1 = document.getElementById("assigntable");
+                     var table1 = document.getElementById("usertable");
 				 
                     for (var i=0; i<usermatched.length; i++){
                         

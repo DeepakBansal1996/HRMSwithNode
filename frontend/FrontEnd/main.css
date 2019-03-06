@@ -1,13 +1,13 @@
 body{
     margin:0px;
     padding:0px;
-    overflow-x: hidden;
-/*    overflow-y: hidden;    */
+/*    overflow-x: hidden;*/
+    /*    overflow-y: hidden;    */
 }
 
 /*
 #try{ 
-    margin-top: 40%;
+margin-top: 40%;
 }
 */
 .main{
@@ -26,19 +26,18 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.navbar-custom {
+    background-color: #ffFFFF;
+}
 #home-section1{
     background-image: url(images/background-books-bookshelves-1193603.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-/*    width: 100%;*/
-/*    min-height: 800px;*/
+    /*    width: 100%;*/
+    /*    min-height: 800px;*/
 }
-#home-section{
-    background-image: url(images/background-books-bookshelves-1193603.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    min-height: 800px;
+#pagbutton{
+    margin-left: 200px;
 }
 #userimage{
     max-height: 20rem;
@@ -48,52 +47,27 @@ body{
     display: inline-block;
 }
 .fontcolor{
-  color: white; 
-    font-weight: 300;
+    color: black; 
+    font-weight: 30px;
 }
-.dark-overlay{
-    background: rgba(0,0,0,0.8);
-    min-height: 800px;
-}
-#logo{
-/*
-    height: 5rem;
-    width: 5rem;
-*/
-    text-align: center;
-/*
-    min-height: 5%;
-    min-width: 5%;
-    margin-top: 2%;
-    margin-left: 71%;
-*/
+#upd{
+    width: 800px;
 }
 .card-body{
     margin-top: 5rem;
-    max-width: 50%;
+    max-width: 30%;
     max-height: 50rem;
-    background-color: rgba(0,0,0,0.6);
+    background-color:#b3b7bb;
+    opacity: 0.8;
     text-align: center;
+    border-radius: 16px;
 }
 h2{
     font-size: 350%;
-    color: white;
-}
-.main{
-    transform: translateY(-20%);
+    color: black;
 }
 h3{
     font-family: 'Dosis', sans-serif;
-/*font-family: 'Nova Flat', cursive;*/
-/*font-family: 'Source Code Pro', monospace;*/
-/*font-family: 'Abril Fatface', cursive;*/
-}
-#adminPic{
-    max-width: 40%;
-    max-height: 30%;
-    transform: translateY(-50%);
-    margin-bottom: 0px;
-    padding-top: 2rem;
 }
 input{
     margin-bottom: 10%;
@@ -105,7 +79,7 @@ input[type=checkbox]{
 h6{
     display: inline-block;
     font-size: 25px;
-    color: white;
+    color: black;
     margin-left: 3%;
 }
 .select2-container--default .select2-selection--multiple .select2-selection__rendered{
@@ -134,13 +108,6 @@ a.navbar-brand-1{
     font-size: 40px;
 }
 
-#adminPicnav-item{
-    margin-right: 200%;
-}
-#home-section
-{
-    padding-top: 98px;
-}
 table{
     font-size: 150%;
     background-color: rgba(0,0,0,0.5);
@@ -152,9 +119,11 @@ table{
     margin-left: 4rem!important;
 }
 .modal-content{
-    color: white;
-    background-color: rgba(0,0,0,0.8);
+    color: black;
+    background-color:#b3b7bb;
+    opacity: ;
     min-height: 200px;
+    border-radius: 16px;
 }
 h4.modal-title{
     font-size: 300%;
@@ -173,17 +142,11 @@ h4.modal-title{
 }
 
 @media only screen and (max-width: 991px){
-   
-    #logo{
-        left: 50%;
-        transform: translateX(-15%);
-
-    }
     .card-body{
         margin-top: 20%;
         min-width: 600px;
         min-height: %;
-        background-color: rgba(0,0,0,0.6);
+        background-color:#b3b7bb;
         text-align: center;
     }
     button.btn{
@@ -198,9 +161,6 @@ h4.modal-title{
     }
     i.fas,i.fab{
         display: none;
-    }
-    .container1{
-        margin-left: 0;
     }
     #home-section{
         height: 1330px;
@@ -247,7 +207,7 @@ h4.modal-title{
         margin-top: 20%;    
         min-width: 100%;
         min-height: %;
-        background-color: rgba(0,0,0,0.6);
+        background-color: #b3b7bb;
         text-align: center;
     }
 }
@@ -265,18 +225,18 @@ h4.modal-title{
 
 table 
 {
-  position: absolute;
-  left: 15%;
-  right:25%;
-  top:30%;
-  text-align: center;
+    position: absolute;
+    left: 15%;
+    right:25%;
+    top:30%;
+    text-align: center;
     border: none;
-  
+
 }
 
 th,td 
 {
-   color: white;
+    color: black;
     padding:16px;
 }
 
