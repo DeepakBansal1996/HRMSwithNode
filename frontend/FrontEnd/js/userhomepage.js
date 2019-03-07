@@ -92,3 +92,9 @@ function showSkills(){
         }
     });
 }
+
+function logoutbutton()
+{
+    localStorage.clear();
+    window.location="index.html";
+}

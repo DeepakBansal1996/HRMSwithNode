@@ -12,73 +12,77 @@
     </head>
     <body onload="showprojects()">
         <nav class="navbar navbar-expand-lg navbar-light fixed-top " style="background-color: #FFFFFF;  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);">
-            <div class="container-fluid">
-                <a class="navbar-brand d-none d-lg-block" href="#"><img src="images/logo.png" alt=""></a>
-                <a class="navbar-brand navbar-brand-1" href="#">Cyber Group</a>
-
-
+            <div class="container-fluid" style="max-height: 55px;">
+                <a class="navbar-brand  d-lg-block" href="#"><img src="images/logo.png" alt=""></a>
+                <!--                <a class="navbar-brand navbar-brand-1" href="#">Cyber Group</a>-->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <button class="btn btn-lg btn-success mx-2" id="showuserbutton" onclick="user()">Show Users</button>
-
+                            <button class="btn  btn-success mx-2" id="showuserbutton" onclick="user2()">Show Users</button>
                         </li>
                         <li class="nav-item">
-                            <button class="btn btn-lg btn-success mx-2 "
+                            <button class="btn  btn-success mx-2 "
                                     id="showprojectbutton" onclick="showprojects()" style="display: none;">Show projects</button>
                         </li>
                         <li class="nav-item">
-                            <button class="btn btn-lg btn-success mx-2" 
+                            <button class="btn  btn-success mx-2" 
                                     data-toggle="modal" data-target="#addUser">Add User</button>
                         </li>
 
                         <li class="nav-item">
-                            <button class="btn btn-lg btn-success mx-2"
+                            <button class="btn  btn-success mx-2"
                                     data-toggle="modal" data-target="#addSkills">Add Skills</button>
                         </li>
 
                         <li class="nav-item">
-                            <button class="btn btn-lg btn-success mx-2"
+                            <button class="btn  btn-success mx-2"
                                     data-toggle="modal" data-target="#addProjects" onclick="createtechstack()">Add Projects</button>
                         </li>
+                        <li class="nav-item">
+                            <button class="btn  btn-success mx-2" style="border-radius: 50px"
+                                    onclick="logoutbutton()">Log Out</button>
                     </ul>
                 </div> 
             </div>
         </nav>
 
         <!--        End of navigation bar-->
-        <!--        Div For SHOW users(need to be hidden)-->
+        <!--        Div For SHOW Projects(need to be hidden)-->
         <div class="row">
             <div id="showprojects">
-            <div class="">
-                <table class="table table-hover" id="mytable" style="left: 0%; top: 20%;">
-                    <thead class="thead-light">
-                        <tr>
-                            <th><i class="fas fa-tasks mr-3"></i>Sr. Number</th>
-                            <th><i class="fas fa-tasks mr-3"></i>Project Name</th>
-                            <th><i class="fas fa-sort-alpha-down mr-3"></i>Project Description</th>
-                            <th><i class="fab fa-stack-exchange mr-3 "></i>Tech Stack</th>
-                            <th><i class="fab fa-stack-exchange mr-3 "></i>Assign Users</th>
-                            <th><i class="fas fa-sort-alpha-down mr-3"></i>Edit</th>
-                            <th><i class="fab fa-stack-exchange mr-3 "></i>Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbodyid">
-                        <tr>  
-                            <td></td>
-                        </tr>
-                    </tbody>
-
-                </table>
-
+                <div class="">
+                    <table class="table table-hover" id="mytable" style="left: 0%; top: 10%;">
+                        <thead class="thead-light">
+                            <tr>
+                                <th><i class="fas fa-tasks mr-3"></i>Sr. Number</th>
+                                <th><i class="fas fa-tasks mr-3"></i>Project Name</th>
+                                <th><i class="fas fa-sort-alpha-down mr-3"></i>Project Description</th>
+                                <th><i class="fab fa-stack-exchange mr-3 "></i>Tech Stack</th>
+                                <th><i class="fab fa-stack-exchange mr-3 "></i>Assigned Users</th>
+                                <th><i class="fas fa-sort-alpha-down mr-3"></i>Edit</th>
+                                <th><i class="fab fa-stack-exchange mr-3 "></i>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyid">
+                            <tr>  
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div  class="row" style="position: fixed; bottom: 0;width: 100%;">
+                        <div class="" style="margin: auto">
+                            <ul id="pagin">
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
-        </div>
-        <!--       End of show users div-->
+        <!--       End of show projects div-->
 
         <!--            Modal For Add user start-->
         <div class="modal" id="addUser">
@@ -137,6 +141,7 @@
             </div>
         </div>
         <!--            end of ADD SKILLS MODAL-->
+
         <!--           start of ADD PROJECTS MODAL-->
         <div class="modal" id="addProjects">
             <div class="modal-dialog">
@@ -161,20 +166,10 @@
                             </select>
                         </div>
                     </div>
-                    <!--
-<div class="form-group">
-<label for="user"><h3>Assign Users:</h3></label>
-<input type="text" class="form-control form-control-lg" id="recommendationsaddproject">
-</div>
--->
-
-
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary btn-lg" onclick="addproject()" data-dismiss="modal" >Add Project</button>
                     </div>
                 </div>
-
-
             </div>
         </div>
         <!--            update modal-->
@@ -194,7 +189,6 @@
                                         <th><i class="fas fa-tasks mr-3"></i>User Name</th>
                                         <th><i class="fas fa-sort-alpha-down mr-3"></i>Skills</th>
                                     </tr>
-
                                 </thead>
                                 <tbody id="usertable">
                                 </tbody>
@@ -206,38 +200,30 @@
         </div>
         <!--            End of ADD PROJECTS MODAL-->
 
-        <!--        start of show projects divison-->
-
+        <!--        start of show users divison-->
         <div id="showusers">
             <div class="container">
-                <table class="table table-hover" id="user" style="left: 0%; top: 20%;">
+                <table class="table table-hover" id="user" style="left: 0%; top: 10%;">
                     <thead class="thead-light">
                         <tr>
                             <th><i class="fas fa-tasks mr-3"></i>Sr. Number</th>
                             <th><i class="fas fa-tasks mr-3"></i>User Name</th>
                             <th><i class="fas fa-tasks mr-3"></i>Skills </th>
-
                         </tr>
                     </thead>
                     <tbody id="userbodyid" >
-
                     </tbody>
                 </table>
+                <div  class="row" style="position: fixed; bottom: 0;width: 100%;">
+                    <div class="" style="margin:auto">
+                        <ul id="userpagin">
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-       
-        
-        
-        <div  class="row" style="position: fixed; bottom: 0;width: 100%;">
-             <div class="" style="margin: auto">
-                  <ul id="pagin">
-            <li></li>
-        </ul>
-             </div>
-        </div>
-        
-
-
+        <!--        End of show users-->
     </body>
     <script
             src="http://code.jquery.com/jquery-3.3.1.js"
@@ -258,11 +244,14 @@
             $("#showprojectbutton").hide();
             $( "#showusers" ).hide();
 
+
+
             $( "#showuserbutton" ).click(function() {
                 $("#showuserbutton").hide();
                 $("#showprojectbutton").show();
                 $( "#showusers" ).show();
                 $( "#showprojects" ).hide();
+                $( "#pagingbutton" ).hide();
 
             });
 

@@ -45,7 +45,7 @@ app.get('/', (req,res)=>{
 });
 
 //getting skills for user
-app.get('/userhomepage/getskills', (req,res)=>{
+app.get('/userhomepage/getskills',checkAuth, (req,res)=>{
   skillmod.find({})
  .then(skills => { res.send({skills:skills})})
 });
@@ -58,7 +58,9 @@ app.post('/adminhomepage/addskill',checkAuth, (req,res)=>{
    }
    new skillmod(skill)
    .save()
-   .then(()=> console.log('done.........'))
+   .then(()=> {return res.status(200).json({
+                          message:'skill has been added'
+                         });console.log('done.........')})
    .catch(err =>console.log(err));
 });
 //get one user
@@ -97,7 +99,9 @@ app.post('/adminhomepage/adduser',checkAuth,(req,res)=>{
              console.log(user);
              new usermod(user)
              .save()
-             .then(()=>{ console.log('done.........')})
+             .then(()=>{ return res.status(200).json({
+                          message:'user has been added'
+                         });console.log('done.........')})
              .catch(err =>{console.log(err)});
             }
          })
@@ -184,7 +188,7 @@ app.get('/adminhomepage/getprojects/:pno',checkAuth, (req,res)=>{
 console.log(req.headers)
 //projectmod.find().count().then(count=>{res.send({count:count})});
 var pageNo;
-var pageSize=4;
+var pageSize=10;
 
   //var count = projectmod.find({}).count();
 // if(req.params.pno=='undefined')
@@ -219,7 +223,9 @@ app.post('/adminhomepage/addproject', (req,res)=>{
 
    new projectmod(prjt)
    .save()
-   .then(()=> console.log('done.........'))
+   .then(()=>{return res.status(200).json({
+                          message:'project has been added'
+                         }); console.log('done.........')})
    .catch(err =>console.log(err));
 
 });
@@ -243,7 +249,7 @@ app.put('/adminhomepage/updateproject/:id',(req,res)=>{
       project.Projectdesc = req.body.Projectdesc;
       project.Techstack = req.body.Techstack;
       project.Userassigned = req.body.Userassigned; 
-      project.save()
+      project.save();
       });
 });
 

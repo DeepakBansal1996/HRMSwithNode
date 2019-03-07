@@ -1,7 +1,8 @@
 body{
     margin:0px;
     padding:0px;
-/*    overflow-x: hidden;*/
+    font-size: 12px;
+    /*    overflow-x: hidden;*/
     /*    overflow-y: hidden;    */
 }
 
@@ -70,7 +71,7 @@ h3{
     font-family: 'Dosis', sans-serif;
 }
 input{
-    margin-bottom: 10%;
+    margin-bottom: 0%;
 }
 input[type=checkbox]{
     width: 20px;
@@ -85,9 +86,24 @@ h6{
 .select2-container--default .select2-selection--multiple .select2-selection__rendered{
     padding: 6px 5px !important;
 }
+.assignbutton{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); 
+    background-color:white; 
+    border:2px solid #BABABA;
+}
+input[type=button]:hover{
+    background-color: red;
+}
 .navbar-brand img{
     width: 60%;
     margin: auto;
+    max-height: 55px;
+}
+ul#userpagin{
+    display: inline-flex;
+}
+ul#pagin{
+    display: inline-flex;
 }
 .nav-link {
     font-size: 160%;
@@ -111,6 +127,9 @@ a.navbar-brand-1{
 table{
     font-size: 150%;
     background-color: rgba(0,0,0,0.5);
+}
+.table td{
+    padding:0.15rem; 
 }
 .modal{
     text-align: center;
@@ -213,7 +232,6 @@ h4.modal-title{
 }
 @media only screen and (min-width: 991px) {
     a.navbar-brand-1 {
-        display: none;
         font-size: 200px;
         margin-top: 30%;
         left: 50%;
