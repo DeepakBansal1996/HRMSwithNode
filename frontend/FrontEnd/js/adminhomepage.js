@@ -9,7 +9,6 @@ var i;
 function showprojects(i,psize)
 
 {
-
     var pno= i;
     if(!pno){
         pno=1;
@@ -137,7 +136,7 @@ function adduser(){
 function user2(){
     userlistbutton();
     showusers();
-    
+
 }
 function userlistbutton()
 {
@@ -154,16 +153,16 @@ function userlistbutton()
     $('#userpagin').html(buttons);
 }
 function showusers(pagenumber){
-   var userpagenumber = pagenumber;
+    var userpagenumber = pagenumber;
     var ps=15;
     if(!userpagenumber){
-       userpagenumber = 1;
-                    }
-   
+        userpagenumber = 1;
+    }
+
     var skip=ps*(userpagenumber-1);
     var newtable=document.getElementById("userbodyid");
     $("#userbodyid").empty();
-    
+
     for (i=skip; i<ps+skip; i++){
         console.log(temp)
         var row=newtable.insertRow(newtable.length);

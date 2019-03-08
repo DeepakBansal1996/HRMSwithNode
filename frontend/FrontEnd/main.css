@@ -1,7 +1,7 @@
-body{
-    margin:0px;
-    padding:0px;
-    font-size: 12px;
+body {
+    margin: 0 px;
+    padding: 0 px;
+    font - size: 12 px;
     /*    overflow-x: hidden;*/
     /*    overflow-y: hidden;    */
 }
@@ -11,106 +11,107 @@ body{
 margin-top: 40%;
 }
 */
-.main{
-    padding-top: 3rem;
-    width: 100%;
+.main {
+    padding - top: 3 rem;
+    width: 100 % ;
 }
 
-.container{
-    margin: 0px auto;
+.container {
+    margin: 0 px auto;
 }
-.container1{
-    margin: 0px auto;
+.container1 {
+    margin: 0 px auto;
+}#
+home - section2 {
+    background - image: url(images / background - books - bookshelves - 1193603. jpg);
+    background - repeat: no - repeat;
+    background - size: cover;
 }
-#home-section2{
-    background-image: url(images/background-books-bookshelves-1193603.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.navbar-custom {
-    background-color: #ffFFFF;
-}
-#home-section1{
-    background-image: url(images/background-books-bookshelves-1193603.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+.navbar - custom {
+    background - color: #ffFFFF;
+}#
+home - section1 {
+    background - image: url(images / background - books - bookshelves - 1193603. jpg);
+    background - repeat: no - repeat;
+    background - size: cover;
     /*    width: 100%;*/
     /*    min-height: 800px;*/
+}#
+pagbutton {
+    margin - left: 200 px;
+}#
+userimage {
+    max - height: 20 rem;
+    max - width: 20 rem;
+}#
+forinline {
+    display: inline - block;
 }
-#pagbutton{
-    margin-left: 200px;
+.fontcolor {
+    color: black;
+    font - weight: 30 px;
+}#
+upd {
+    width: 800 px;
 }
-#userimage{
-    max-height: 20rem;
-    max-width: 20rem;
-}
-#forinline{
-    display: inline-block;
-}
-.fontcolor{
-    color: black; 
-    font-weight: 30px;
-}
-#upd{
-    width: 800px;
-}
-.card-body{
-    margin-top: 5rem;
-    max-width: 30%;
-    max-height: 50rem;
-    background-color:#b3b7bb;
+.card - body {
+    margin - top: 5 rem;
+    max - width: 30 % ;
+    max - height: 50 rem;
+    background - color: #b3b7bb;
     opacity: 0.8;
-    text-align: center;
-    border-radius: 16px;
+    text - align: center;
+    border - radius: 16 px;
 }
-h2{
-    font-size: 350%;
+h2 {
+    font - size: 350 % ;
     color: black;
 }
-h3{
-    font-family: 'Dosis', sans-serif;
+h3 {
+    font - family: 'Dosis', sans - serif;
 }
-input{
-    margin-bottom: 0%;
+input {
+    margin - bottom: 0 % ;
 }
-input[type=checkbox]{
-    width: 20px;
-    height: 20px;
+input[type = checkbox] {
+    width: 20 px;
+    height: 20 px;
 }
-h6{
-    display: inline-block;
-    font-size: 25px;
+h6 {
+    display: inline - block;
+    font - size: 25 px;
     color: black;
-    margin-left: 3%;
+    margin - left: 3 % ;
 }
-.select2-container--default .select2-selection--multiple .select2-selection__rendered{
-    padding: 6px 5px !important;
+.select2 - container--
+default.select2 - selection--multiple.select2 - selection__rendered {
+    padding: 6 px 5 px!important;
 }
-.assignbutton{
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); 
-    background-color:white; 
-    border:2px solid #BABABA;
+.assignbutton {
+    box - shadow: 2 px 2 px 2 px 1 px rgba(0, 0, 0, 0.2);
+    background - color: white;
+    border: 2 px solid# BABABA;
 }
-input[type=button]:hover{
-    background-color: red;
+input[type = button]: hover {
+    background - color: red;
 }
-.navbar-brand img{
-    width: 60%;
+.navbar - brand img {
+    width: 60 % ;
     margin: auto;
-    max-height: 55px;
+    max - height: 55 px;
 }
-ul#userpagin{
-    display: inline-flex;
+ul# userpagin {
+    display: inline - flex;
 }
-ul#pagin{
-    display: inline-flex;
+ul# pagin {
+    display: inline - flex;
 }
-.nav-link {
-    font-size: 160%;
-    margin: 6px
+.nav - link {
+    font - size: 160 % ;
+    margin: 6 px
 }
-.navbar{
-    background-color: #333;
+.navbar {
+    background - color: #333;
 }
 
 .offset-md-3{
@@ -139,122 +140,121 @@ table{
 }
 .modal-content{
     color: black;
-    background-color:#b3b7bb;
+    background-color:# b3b7bb;
     opacity: ;
-    min-height: 200px;
-    border-radius: 16px;
+    min - height: 200 px;
+    border - radius: 16 px;
 }
-h4.modal-title{
-    font-size: 300%;
+h4.modal - title {
+    font - size: 300 % ;
 }
-.ml-5, .mx-5 {
-    margin-left: 8rem!important;
+.ml - 5, .mx - 5 {
+    margin - left: 8 rem!important;
 }
-.ml-4, .mx-4 {
-    margin-left: 5.5rem!important;
-}
-#skills{
-    display: inline-block;
-    margin: 2rem 2rem 0rem 0rem;
-    font-size: 1.5rem;
-    font-family: 'Shadows Into Light', cursive;
+.ml - 4, .mx - 4 {
+    margin - left: 5.5 rem!important;
+}#
+skills {
+    display: inline - block;
+    margin: 2 rem 2 rem 0 rem 0 rem;
+    font - size: 1.5 rem;
+    font - family: 'Shadows Into Light',
+        cursive;
 }
 
-@media only screen and (max-width: 991px){
-    .card-body{
-        margin-top: 20%;
-        min-width: 600px;
-        min-height: %;
-        background-color:#b3b7bb;
-        text-align: center;
+@media only screen and(max - width: 991 px) {
+    .card - body {
+        margin - top: 20 % ;
+        min - width: 600 px;
+        min - height: % ;
+        background - color: #b3b7bb;
+        text - align: center;
     }
-    button.btn{
-        width: 95%;
-        margin-top: 2%;
+    button.btn {
+        width: 95 % ;
+        margin - top: 2 % ;
 
     }
-    .modal-dialog{
-        margin: 0px;
-        max-width: 96%;
-        margin-top: 200px;
+    .modal - dialog {
+        margin: 0 px;
+        max - width: 96 % ;
+        margin - top: 200 px;
     }
-    i.fas,i.fab{
+    i.fas, i.fab {
         display: none;
+    }#
+    home - section {
+        height: 1330 px;
     }
-    #home-section{
-        height: 1330px;
+    .dark - overlay {
+        height: 1330 px;
     }
-    .dark-overlay{
-        height: 1330px;  
-    }
-    .ml-5, .mx-5 {
-        margin-left: 0.5rem!important;
+    .ml - 5, .mx - 5 {
+        margin - left: 0.5 rem!important;
     }
     .h3, h3 {
-        font-size: 3.75rem;
+        font - size: 3.75 rem;
     }
-    h4.modal-title {
-        font-size: 300%;
+    h4.modal - title {
+        font - size: 300 % ;
     }
-    .form-control-lg{
-        font-size: 1.25rem;
+    .form - control - lg {
+        font - size: 1.25 rem;
     }
-    .btn-group-lg>.btn, .btn-lg {
-        font-size: 1.50rem;
+    .btn - group - lg > .btn, .btn - lg {
+        font - size: 1.50 rem;
     }
-    h4.modal-title {
-        font-size: 421%;
+    h4.modal - title {
+        font - size: 421 % ;
     }
-    .ml-3, .mx-3 {
-        margin-left: 0.5rem!important;
+    .ml - 3, .mx - 3 {
+        margin - left: 0.5 rem!important;
     }
-    .ml-4, .mx-4 {
-        margin-left: 0.5rem!important;
+    .ml - 4, .mx - 4 {
+        margin - left: 0.5 rem!important;
     }
-    .ml-2, .mx-2 {
-        margin-left: 0rem!important;
+    .ml - 2, .mx - 2 {
+        margin - left: 0 rem!important;
     }
 
 
 
 }
-@media only screen and (max-width: 480px){
-    #logo{
-        width: 100%;
+@media only screen and(max - width: 480 px) {
+    #
+    logo {
+        width: 100 % ;
     }
-    .card-body{
-        margin-top: 20%;    
-        min-width: 100%;
-        min-height: %;
-        background-color: #b3b7bb;
-        text-align: center;
-    }
-}
-@media only screen and (min-width: 991px) {
-    a.navbar-brand-1 {
-        font-size: 200px;
-        margin-top: 30%;
-        left: 50%;
+    .card - body {
+        margin - top: 20 % ;
+        min - width: 100 % ;
+        min - height: % ;
+        background - color: #b3b7bb;
+        text - align: center;
     }
 }
+@media only screen and(min - width: 991 px) {
+    a.navbar - brand - 1 {
+        font - size: 200 px;
+        margin - top: 30 % ;
+        left: 50 % ;
+    }
+}
 
 
 
 
-table 
-{
+table {
     position: absolute;
-    left: 15%;
-    right:25%;
-    top:30%;
-    text-align: center;
+    left: 15 % ;
+    right: 25 % ;
+    top: 30 % ;
+    text - align: center;
     border: none;
 
 }
 
-th,td 
-{
+th, td {
     color: black;
-    padding:16px;
+    padding: 16 px;
 }
-
