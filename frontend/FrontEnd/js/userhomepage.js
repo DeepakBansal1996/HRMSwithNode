@@ -2,12 +2,17 @@ Id=localStorage.getItem("username");;
 
 var temp=null;
 
-
+var token=localStorage.getItem("token")
 function FillDetails(){
 				$.ajax({
 				url: 'http://localhost:5000/userhomepage/getuserdetails/'+Id,
 				type: 'GET',
 				dataType: 'json', 
+                headers: {
+                     "Content-Type": "application/json",
+                     "cache-control": "no-cache" ,
+                     "Authorization": "Bearer "+token
+                      },
 				success: function(data)
 				{
                     temp=data; 
@@ -15,7 +20,7 @@ function FillDetails(){
                     console.log(tempskill);
                     document.getElementById("displayUsername").innerHTML="@"+data.users.Username;  
                     console.log("after name");
-                   // document.getElementById("myskill").innerHTML=data.users.Skills;
+                  
                     var table=document.getElementById("mytable");
                     for( i in  data.users.Skills)
                     {
@@ -26,7 +31,7 @@ function FillDetails(){
                         
                         
                       var row=table.insertRow(table.length);
-                      //row.insertCell(0).innerHTML=i;
+                      
 				      row.insertCell(0).innerHTML=data.users.Skills[i];   
                       console.log(tempskill[i]);
                         }
@@ -64,10 +69,15 @@ function addskill(){
         type: 'PUT',
         dataType: 'json',
 		data: data,
+       headers: {
+                    // "Content-Type": "application/json",
+                     "cache-control": "no-cache" ,
+                     "Authorization": "Bearer "+token
+                      },
         success: function(res)
 							{
-                              //  console.log(res);
-							alert("Project has been updated succesfully");
+                                console.log(res);
+							alert("Skills Added succesfully");
 							window.location="userhomepage.html";
 							}				
         });
@@ -79,6 +89,11 @@ function showSkills(){
         url: 'http://localhost:5000/userhomepage/getskills',
         type: 'GET',
         dataType: 'json', 
+         headers: {
+                     "Content-Type": "application/json",
+                     "cache-control": "no-cache" ,
+                     "Authorization": "Bearer "+token
+                      },
         success: function(data){
             console.log("pallavi",data);
             var skills = data.skills;

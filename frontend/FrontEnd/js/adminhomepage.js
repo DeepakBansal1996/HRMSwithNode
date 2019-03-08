@@ -3,7 +3,7 @@ var temp=null;
 var temp2=null;
 var pageNumber=1;
 var pageSize=10;
-var token=localStorage.getItem("token")
+var token=localStorage.getItem("token");
 var found= new Set();
 var i;
 function showprojects(i,psize)

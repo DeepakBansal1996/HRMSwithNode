@@ -64,7 +64,7 @@ app.post('/adminhomepage/addskill',checkAuth, (req,res)=>{
    .catch(err =>console.log(err));
 });
 //get one user
-app.get('/userhomepage/getuserdetails/:Username', (req,res)=>{
+app.get('/userhomepage/getuserdetails/:Username',checkAuth, (req,res)=>{
   usermod.findOne({
 	Username:req.params.Username
   })
@@ -167,7 +167,7 @@ app.get('/userhomepage/matcheduserdetails/', (req,res)=>{
 });
 
 //update user skills
-app.put('/adminhomepage/updateUserskills/:Username',(req,res)=>{
+app.put('/adminhomepage/updateUserskills/:Username',checkAuth, (req,res)=>{
 usermod.findOne({
   Username:req.params.Username
 })
@@ -179,7 +179,9 @@ usermod.findOne({
       users.Skills = req.body["Skills[]"];
       console.log(req.body["Skills[]"]); 
       users.save()
-      });
+      }).then(()=>{return res.status(200).json({
+                          message:'skills have been added'
+                         })});
  });
 
 //get projects
