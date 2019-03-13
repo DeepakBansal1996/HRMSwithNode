@@ -9,6 +9,7 @@ const jwt = require("jsonwebtoken");
 const checkAuth = require('./middleware/checkAuth');
 var cors = require('cors')
 require('dotenv').config();
+const path = require('path')
 
 //Enabling Cors
 app.use(cors())
@@ -18,6 +19,8 @@ app.use((req, res, next) => {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
     next();
 });
+
+app.use(express.static(path.join(__dirname, 'frontend/FrontEnd')))
 
 //database connection
 mongoose.Promise = global.Promise;
@@ -45,7 +48,7 @@ app.use(bodyParser.json())
 
 //test
 app.get('/', (req, res) => {
-    res.send("hello");
+    res.send('index.html');
 });
 
 //getting skills for user
