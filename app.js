@@ -1,5 +1,6 @@
 //requiring files
 const express = require('express');
+const db = require('./config/database');
 const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -20,7 +21,7 @@ app.use((req, res, next) => {
 
 //database connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://DeepakBansal123:Deepak@deepak-b51yv.mongodb.net/test?retryWrites=true', {
+mongoose.connect(db.mongoURI, {
         useMongoClint: true
     })
     .then(() => console.log('MongoDB Connected...'))
