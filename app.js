@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 
 //database connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/HRMS', {
+mongoose.connect('mongodb+srv://DeepakBansal123:Deepak@deepak-b51yv.mongodb.net/test?retryWrites=true', {
         useMongoClint: true
     })
     .then(() => console.log('MongoDB Connected...'))
