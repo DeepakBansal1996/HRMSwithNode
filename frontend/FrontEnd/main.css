@@ -1,7 +1,7 @@
 body {
     margin: 0 px;
     padding: 0 px;
-    font - size: 12 px;
+    font-size: 12px;
     /*    overflow-x: hidden;*/
     /*    overflow-y: hidden;    */
 }
@@ -15,7 +15,13 @@ margin-top: 40%;
     padding - top: 3 rem;
     width: 100 % ;
 }
-
+.card-body{
+    text-align: center;
+    background-color: #efefef;
+    margin-top: 8%;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+}
 .container {
     margin: 0 px auto;
 }
@@ -23,7 +29,7 @@ margin-top: 40%;
     margin: 0 px auto;
 }#
 home - section2 {
-    background - image: url(images / background - books - bookshelves - 1193603. jpg);
+    background - image: url(images / background - books - bookshelves - 1deletebutton193603. jpg);
     background - repeat: no - repeat;
     background - size: cover;
 }
@@ -258,3 +264,12 @@ th, td {
     color: black;
     padding: 16 px;
 }
+
+#deletebutton:hover {
+    background: red;
+}
+#editbutton:hover {
+    background: orange;
+}
+
+

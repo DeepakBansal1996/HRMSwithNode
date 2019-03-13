@@ -47,8 +47,8 @@ function showprojects(i,psize)
                 var t= document.createTextNode(row.insertCell(4).innerHTML=data.project[i].Userassigned);
                 b.appendChild(t);
 
-                row.insertCell(5).innerHTML="<input style='box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); background-color:white; border:2px solid #BABABA;' type='button' value='Assign Users' style='color:white;' class='btn deepak mx-2'data-toggle='modal' data-target='#updateProjects' editbutton' onclick=\'assign(\""+data.project[i]._id+"\")'>";
-                row.insertCell(6).innerHTML="<input style=' box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); background-color:white; border:2px solid #BABABA;' type='button' value='Delete' class=' btn  deletebutton' onclick=\'deleteproject(\""+data.project[i]._id+"\")'>";
+                row.insertCell(5).innerHTML="<input style='box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); background-color:white; border:2px solid #BABABA;' type='button' value='Assign Users' style='color:white;' class='btn mx-2 editbutton' data-toggle='modal' data-target='#updateProjects' id= 'deletebutton' onclick=\'assign(\""+data.project[i]._id+"\")'>";
+                row.insertCell(6).innerHTML="<input style=' box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); background-color:white; border:2px solid #BABABA;' type='button' value='Delete' class=' btn  deletebutton' id= 'deletebutton' onclick=\'deleteproject(\""+data.project[i]._id+"\")'>";
 
             }
             console.log("han",table);  
@@ -59,7 +59,7 @@ function showprojects(i,psize)
 
 }
 
-function getTotal()
+function getTotal() 
 {
     var count=temp.count;
     numberOfPages = Math.ceil(count / pageSize);
