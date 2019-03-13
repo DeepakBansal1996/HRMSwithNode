@@ -47,9 +47,9 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json())
 
 //test
-app.get('/', (req, res) => {
-    res.send('index.html');
-});
+// app.get('/', (req, res) => {
+//     res.send('index.html');
+// });
 
 //getting skills for user
 app.get('/userhomepage/getskills', checkAuth, (req, res) => {

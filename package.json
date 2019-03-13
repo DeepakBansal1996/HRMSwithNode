@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "engines": {
+    "node": "11.8.0"
+  },
   "dependencies": {
     "bcrypt": "^3.0.4",
     "body-parser": "^1.18.3",
